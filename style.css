@@ -70,3 +70,7 @@ a {
     top: 60svh;
     left: 80svw;
 }
+
+.question {
+    text-align: center;
+}

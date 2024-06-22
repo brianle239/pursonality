@@ -53,6 +53,7 @@ body {
 
 .redirect:hover {
     background-color: #3c859d;
+    cursor: pointer;
 }
 
 a {
@@ -73,4 +74,79 @@ a {
 
 .question {
     text-align: center;
+}
+
+.backPaw {
+    position: absolute;
+    background-image: url("./assets/Paw Back.png");
+    background-size: 15vh;
+    height: 15vh;
+    width: 15vh;
+    left: 15svh;
+    bottom: 10svh;
+}
+
+.nextPaw {
+    position: absolute;
+    background-image: url("./assets/Paw Front.png");
+    background-size: 15vh;
+    height: 15vh;
+    width: 15vh;
+    left: 85svw;
+    bottom: 10svh;
+}
+
+.paw:hover {
+    cursor: pointer;
+}
+
+#aot {
+    position: absolute;
+    background-image: url("./assets/happybday_aot.jpg");
+    background-size: cover;
+    left: 25svw;
+    height: 70svh;
+    width: 110svh;
+    border-radius: 10px;
+}
+
+.end_title {
+    font-family: 'Red Hat Display';
+    font-size: 10svh;
+    align-items: center;
+    text-align: center
+}
+
+.outer_progress {
+    margin-top: 15svh;
+    display: flex;
+    justify-content: center;
+}
+
+.progress {
+    display: inline-block;
+    width: 80svw;
+    height: 10svh;
+    margin: 35px;
+    border-radius: 20px;
+}
+
+.bar {
+    background-color: #3c859d;
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    transition: width;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.36, .55, .63, .48);
+}
+
+.cat_bar {
+    background-image: url("./assets/Cat Progress.png");
+    background-size: 15vh;
+}
+
+.loading_text {
+    text-align: center;
+    font-size: 5svh;
 }

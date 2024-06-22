@@ -6,6 +6,17 @@ body {
     font-family: 'Red Hat Display';
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 .logo {
     background-image: url("./assets/logo.png");
     background-size: 14vh;
@@ -77,27 +88,37 @@ a {
 }
 
 .backPaw {
-    position: absolute;
     background-image: url("./assets/Paw Back.png");
     background-size: 15vh;
     height: 15vh;
     width: 15vh;
     left: 15svh;
     bottom: 10svh;
+    margin-left: 5svw;
 }
 
 .nextPaw {
-    position: absolute;
     background-image: url("./assets/Paw Front.png");
     background-size: 15vh;
     height: 15vh;
     width: 15vh;
     left: 85svw;
     bottom: 10svh;
+    margin-left: 75svw;
+}
+
+.endPaw {
+    position: absolute;
+    top: 80svh;
+    margin: 0;
 }
 
 .paw:hover {
     cursor: pointer;
+}
+
+.navigation {
+    display: flex;
 }
 
 #aot {
@@ -149,4 +170,55 @@ a {
 .loading_text {
     text-align: center;
     font-size: 5svh;
+}
+
+.multiselect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mpaw {
+    background-image: url("./assets/Cat Paw.svg");
+    opacity: .2;
+    margin: 1svw;
+}
+
+.leftmost {
+    background-size: 15vh;
+    height: 15svh;
+    width: 15svh;
+}
+
+.left {
+    background-size: 12.5vh;
+    height: 12.5svh;
+    width: 12.5svh;
+}
+
+.middle {
+    background-size: 10vh;
+    height: 10svh;
+    width: 10svh;
+}
+
+.right {
+    background-size: 12.5vh;
+    height: 12.5svh;
+    width: 12.5svh;
+}
+
+.rightmost {
+    background-size: 15vh;
+    height: 15svh;
+    width: 15svh;
+}
+
+.question {
+    font-size: 6svh;
+    padding: 3svh;
+}
+
+.wieght {
+    font-size: 3svh;
 }

@@ -83,22 +83,6 @@ function playRandomMusic() {
     fadeVolume(audio, newVolume = .5, duration = 5000)
 }
 
-function fadeVolume(audioElement, newVolume, duration = 1000) {
-    const startVolume = audioElement.volume;
-    const volumeStep = (newVolume - startVolume) / (duration / 20); // 20 steps for smooth fade
-
-    let currentVolume = startVolume;
-    const fadeInterval = setInterval(() => {
-        currentVolume += volumeStep;
-        audioElement.volume = Math.min(1, Math.max(0, currentVolume)); // Clamp volume between 0 and 1
-
-        if (Math.abs(currentVolume - newVolume) < Math.abs(volumeStep)) {
-            clearInterval(fadeInterval);
-            audioElement.volume = newVolume; // Ensure final volume is exact
-        }
-    }, 20); // Adjust interval for smoother fades (lower value for smoother)
-}
-
 window.onload = function() {
 
     let audio1 = document.getElementById("cat_music1")
@@ -159,3 +143,22 @@ bars.forEach((bar, index) => {
         bar.style.width = '100%';
     });
 })
+
+function handleMultiSelect(event) {
+    const paw = event.target;
+
+    siblings = paw.parentNode.childNodes
+    for (let i = 0; i < siblings.length; i++) {
+
+        try {
+            if (siblings[i].classList.contains("mpaw")) {
+                siblings[i].style.opacity = ".1";
+
+            }
+        } catch {
+            continue
+        }
+    }
+    paw.style.opacity = "1";
+
+}
